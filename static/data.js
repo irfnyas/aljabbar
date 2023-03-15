@@ -26,14 +26,14 @@ export const navigationMenus = [
         id: 1,
         title: 'Sejarah Masjid Raya Al Jabbar',
         description: 'Masjid Raya Al Jabbar mulai didesain tahun 2015 oleh Ridwan Kamil sebagai Masjid Raya tingkat Pemerintah Daerah Provinsi. Bangunan utama dirancang dengan luas lantai 99 x 99 m2 sesuai angka Asmaul Husna.',
-        icon: '/icons/dome.svg',
+        icon: '/icons/info.svg',
         link: '/sejarah'
       },
       {
         id: 2,
         title: 'Keistimewaan Masjid Raya Al Jabbar',
         description: 'Masjid Al Jabbar memiliki keistimewaan seperti arsitektur ikonik, masjid terapung, empat menara, ruang shalat monumental, museum, tata cahaya, pusat edukasi dan rekreasi religi.',
-        icon: '/icons/dome.svg',
+        icon: '/icons/union.svg',
         link: '/keistimewaan'
       },
       {

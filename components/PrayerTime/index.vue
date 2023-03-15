@@ -1,6 +1,6 @@
 <template>
   <section class="text-white bg-[#16A75C]">
-    <BaseContainer class="flex flex-col justify-center lg:justify-start lg:flex-row lg:items-center md:leading-[57px] h-[471px] md:h-[473px] lg:h-[288px] xl:h-[328px] md:px-0 xl:px-28 md:bg-[url('/rules-background.svg')] md:bg-right-bottom md:bg-no-repeat md:bg-[length:425px_255px]">
+    <BaseContainer class="flex flex-col justify-center lg:justify-start lg:flex-row lg:items-center md:leading-[57px] h-[471px] md:h-[473px] lg:h-[288px] xl:h-[328px] md:bg-[url('/rules-background.svg')] md:bg-right-bottom md:bg-no-repeat md:bg-[length:425px_255px]">
       <!-- Next Prayer Time -->
       <div class="flex flex-col gap-2 text-[#E6F6EC] leading-[17px] md:leading-[21px] border-b lg:border-b-0 lg:border-r border-[#4DC27E] pb-4 lg:pb-[31px] lg:pr-[67px]">
         <h1 class="text-[14px] md:text-[18px]">
