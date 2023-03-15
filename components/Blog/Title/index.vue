@@ -1,6 +1,6 @@
 <template>
   <div>
-    <NuxtLink to="/">
+    <NuxtLink v-if="showBackButton" to="/">
       <BaseButton class="bg-gray-100 text-green-600 text-sm my-[22px]">
         <template #icon-left>
           <img width="19.5" height="16" src="/icons/arrow-left.svg" alt="Icon Arrow Left">
@@ -13,7 +13,7 @@
         {{ title }}
       </h1>
       <div class="w-32 border-2 border-green-600" />
-      <p class="text-gray-700 text-xs font-light lg:text-center">
+      <p class="text-gray-700 font-light text-sm md:text-base lg:text-center max-w-[832px]">
         {{ subtitle }}
       </p>
     </div>
@@ -35,6 +35,10 @@ export default {
       required: true,
       default: ''
     },
+    showBackButton: {
+      type: Boolean,
+      default: true
+    }
   },
 }
 </script>

@@ -4,5 +4,5 @@
 
 ## Evidence
 title:
-project: Al Jabbar
+project: Digitalisasi Al Jabbar
 participants: 

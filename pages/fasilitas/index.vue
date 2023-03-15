@@ -6,16 +6,11 @@
         :subtitle="subtitle"
       />
       <BlogContent
-        v-for="item in data.slice(0,3)"
+        v-for="item in data"
         :key="item.id"
         :data="item"
       />
       <img width="1280" height="842.25" src="/images/facilities.png" alt="Ilustrasi Fasilitas Masjid Al Jabbar">
-      <BlogContent
-        v-for="item in data.slice(-2)"
-        :key="item.id"
-        :data="item"
-      />
     </div>
   </BaseContainer>
 </template>

@@ -6,17 +6,7 @@
         :subtitle="subtitle"
       />
       <BlogContent
-        v-for="item in data.slice(0,2)"
-        :key="item.id"
-        :data="item"
-      />
-      <div class="w-full flex justify-center">
-        <p class="text-gray-800 text-sm font-normal w-full break-words lg:text-center max-w-[1061.5px]">
-          {{ footnote }}
-        </p>
-      </div>
-      <BlogContent
-        v-for="item in data.slice(-3)"
+        v-for="item in data"
         :key="item.id"
         :data="item"
       />
