@@ -4,7 +4,7 @@
       class="relative w-full h-full rounded-lg group overflow-hidden hover:cursor-pointer"
     >
       <div
-        class="absolute w-full h-full bg-cover bg-no-repeat rounded-lg group-hover:scale-110 transition-all"
+        class="absolute w-full h-full bg-cover bg-no-repeat rounded-lg group-hover:scale-110 transition-all duration-500"
         :style="`background-image: url('${news.thumbnail}')`"
       />
       <div class="absolute w-full h-full bg-gradient-to-t from-[#000000]/100 to-[#000000]/0 rounded-lg text-white p-4 flex flex-col justify-end">

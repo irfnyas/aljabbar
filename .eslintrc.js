@@ -17,6 +17,8 @@ module.exports = {
         "vue"
     ],
     "rules": {
-        "vue/multi-word-component-names": 0
+        "vue/multi-word-component-names": 0,
+        'vue/no-deprecated-slot-attribute': 'off',
+        'vue/no-deprecated-v-on-native-modifier': 'off'
     }
 }

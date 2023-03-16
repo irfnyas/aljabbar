@@ -2,6 +2,7 @@
   <div>
     <Hero />
     <PrayerTime />
+    <Facilities />
     <!-- @todo: delete dummy padding -->
     <VisitRules class="mt-[60px]" />
     <Videos />
