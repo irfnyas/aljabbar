@@ -8,7 +8,8 @@ import {
   getWeekOfMonth,
   isAfter,
   startOfMonth,
-  startOfWeek
+  startOfWeek,
+  differenceInMinutes
 } from 'date-fns'
 
 export function format (date, options) {
@@ -74,4 +75,11 @@ export function getMinutesDifferenceFromNow (date) {
   now = currentHour * 60 + currentMinutes
 
   return (comparedTime - now)
+}
+
+export function minutesDifference (current, previous = new Date()) {
+  const currentTime = new Date(current)
+  const userTimezoneOffset = currentTime.getTimezoneOffset() * 60000
+
+  return Math.abs(differenceInMinutes(new Date(previous), new Date(currentTime.getTime() + userTimezoneOffset)))
 }

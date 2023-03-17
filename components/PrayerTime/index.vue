@@ -12,7 +12,7 @@
         <p>
           akan dimulai dalam
           <span class="font-bold text-base md:text-[20px] text-white leading-[19px] md:leading-[24px]">
-            0{{ nextPrayerInHour }} jam : {{ nextPrayerInMinutes }} menit
+            {{ nextPrayerInHour }} jam : {{ nextPrayerInMinutes }} menit
           </span>
           lagi
         </p>
@@ -34,13 +34,16 @@
 </template>
 
 <script>
-import { getHoursAndMinutes, getMinutesDifferenceFromNow } from '~/utils/date'
+import {
+  getHoursAndMinutes,
+  getMinutesDifferenceFromNow,
+  minutesDifference
+} from '~/utils/date'
 
 export default {
   async fetch() {
     const now = new Date().toLocaleDateString('fr-CA')
-    const response = await this.$axios.$get(`/v1/prayer-times/${now}`)
-    const times = response.data.times
+    const times = await this.fetchPrayerTime(now)
     this.rawTimeList = { ...times }
     this.findNextPrayerTime()
     this.prayerTimes = [
@@ -70,7 +73,7 @@ export default {
       }
     ]
   },
-  fetchOnServer: true,
+  fetchOnServer: false,
   data() {
     return {
       prayerTimes: [],
@@ -81,12 +84,19 @@ export default {
     }
   },
   methods: {
-    findNextPrayerTime() {
+    async fetchPrayerTime(time) {
+      const response = await this.$axios.$get(`/v1/prayer-times/${time}`)
+      return response.data.times
+    },
+    async findNextPrayerTime() {
       const typeOfPrayers = Object.keys(this.rawTimeList)
       let minDifference
       let prayerName
+
+      // loop through prayer time to find the smallest margin to current time
       typeOfPrayers.forEach(type => { // ["imsak", "fajr", "sunrise", "dhuhr", "asr", "maghrib", "isha"]
-        if (type !== 'imsak' && type !== 'sunrise') {
+        if (type !== 'imsak' && type !== 'sunrise') { // imsak and sunrise are not included to the prayer time
+          // @todo: change getMinutesDifferenceFromNow to minutesDifference from date-fns
           const currentDifference = getMinutesDifferenceFromNow(this.rawTimeList[type])
           if ((minDifference === undefined || minDifference > currentDifference) && currentDifference > 0) {
             minDifference = currentDifference
@@ -94,12 +104,28 @@ export default {
           }
         }
       });
+      
+      // find shubuh time on the next day
+      if (minDifference === undefined) { // time already passed isha on current day
+        const today = new Date()
+        const tomorrow = new Date(today)
+        tomorrow.setDate(today.getDate() + 1)
+        const time = await this.fetchPrayerTime(tomorrow.toLocaleDateString('fr-CA'))
+        minDifference = minutesDifference(time.fajr)
+        prayerName = 'fajr'
+      }
 
+      // map the prayer name and time based on minDifference and prayerName
       this.nextPrayerName = this.getPrayerName(prayerName)
       this.nextPrayerInHour = Math.floor(minDifference / 60)
       this.nextPrayerInMinutes = (minDifference - this.nextPrayerInHour * 60) % 60
+
+      // add 0 to minute and hour below 10
       if (this.nextPrayerInMinutes < 10) {
         this.nextPrayerInMinutes = `0${this.nextPrayerInMinutes}`
+      }
+      if (this.nextPrayerInHour < 10) {
+        this.nextPrayerInHour = `0${this.nextPrayerInHour}`
       }
     },
     getPrayerName(key) {

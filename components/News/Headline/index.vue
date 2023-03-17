@@ -1,15 +1,15 @@
 <template>
-  <a :href="`https://jabarprov.go.id/berita/${news.slug}`" target="_blank">
+  <a :href="`https://jabarprov.go.id/berita/${news?.slug}`" target="_blank">
     <article
       class="relative w-full h-full rounded-lg group overflow-hidden hover:cursor-pointer"
     >
       <div
         class="absolute w-full h-full bg-cover bg-no-repeat rounded-lg group-hover:scale-110 transition-all duration-500"
-        :style="`background-image: url('${news.thumbnail}')`"
+        :style="`background-image: url('${news?.thumbnail}')`"
       />
       <div class="absolute w-full h-full bg-gradient-to-t from-[#000000]/100 to-[#000000]/0 rounded-lg text-white p-4 flex flex-col justify-end">
         <h2 class="font-bold text-[26px] leading-10 line-clamp-3 mb-4">
-          {{ news.title }}
+          {{ news?.title }}
         </h2>
         <div class="flex text-sm text-[#E9E9E9]">
           <img src="/icons/calendar.svg" alt="Ikon Kalender" aria-hidden="true" width="12" height="12" class="mr-[6px]">
@@ -39,8 +39,8 @@ export default {
         day: "numeric",
         weekday: "long"
       }
-      return this.news.published_at
-        ? new Date(this.news.published_at).toLocaleDateString('id-ID', options)
+      return this.news?.published_at
+        ? new Date(this.news?.published_at).toLocaleDateString('id-ID', options)
         : '-'
     }
   }

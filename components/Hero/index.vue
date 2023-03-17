@@ -12,7 +12,8 @@
 export default {
   async fetch() {
     // @todo: change this API to BE API
-    this.listBanner = await this.$axios.$get('https://api.coredatajds.id/al-jabar-front-office/banner')
+    const response = await this.$axios.$get('/v1/banners')
+    this.listBanner = [...response.data]
     this.listBanner.forEach((image, index) => {
       this.listImage.push({
         id: index + 1,

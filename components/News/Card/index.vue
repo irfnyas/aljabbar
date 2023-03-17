@@ -1,5 +1,5 @@
 <template>
-  <a :href="`https://jabarprov.go.id/berita/${news.slug}`" target="_blank">
+  <a :href="`https://jabarprov.go.id/berita/${news?.slug}`" target="_blank">
     <article class="flex flex-col px-[14px] pt-[14px] pb-[30px] hover:cursor-pointer border-b border-[#EEEEEE] group">
       <h3 class="text-[#212121] group-hover:text-[#16A75C] transition-colors line-clamp-2 mb-2">
         {{ news.title }}

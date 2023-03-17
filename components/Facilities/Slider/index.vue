@@ -3,7 +3,7 @@
     <client-only>
       <swiper
         v-show="swiperReady"
-        ref="swiper"
+        ref="facilitySwiper"
         :options="swiperOptions"
         @ready="swiperReady = true"
         @mouseover.native="pauseSwiper"
@@ -86,7 +86,7 @@ export default {
   },
   computed: {
     swiper () {
-      return this.$refs.swiper.$swiper
+      return this.$refs.facilitySwiper.$swiper
     }
   },
   methods: {
