@@ -6,6 +6,7 @@ import {
   formatISO,
   getDay,
   getWeekOfMonth,
+  isAfter,
   startOfMonth,
   startOfWeek
 } from 'date-fns'
@@ -16,6 +17,10 @@ export function format (date, options) {
 
 export function formatISODate (date) {
   return formatISO(new Date(date), { representation: 'date' })
+}
+
+export function isAfterToday (current, previous = new Date()) {
+  return isAfter(new Date(current), new Date(previous))
 }
 
 export function monthsDifference (current, previous = new Date()) {

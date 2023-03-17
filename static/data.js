@@ -537,3 +537,9 @@ export const filterActivities = Object.freeze(
     ]
   }
 )
+
+export const activityStatus = {
+  done: 'Telah Selesai',
+  ongoing: 'Sedang Berlangsung',
+  coming: 'Akan Datang'
+}
