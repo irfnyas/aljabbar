@@ -8,10 +8,11 @@
         <div class="border-t-[3px] border-[#16A75C] max-w-[128px] mt-[26px]" />
       </div>
       <BaseButton class="hidden md:block max-h-[38px] text-[#16A75C] font-bold text-sm leading-[18px] rounded-lg border-[#16A75C]">
-        <a href="https://www.youtube.com/@masjidaljabbar" target="_blank">
-          Lihat Semua Video
-        </a>
-        <template #icon-right>
+        <a href="https://www.youtube.com/@masjidaljabbartv" target="_blank" class="flex justify-between w-full">
+          <!-- @todo: confirm youtube channel -->
+          <p class="mr-[10px]">
+            Lihat Semua Video
+          </p>
           <img
             src="/icons/open-tab.svg"
             alt="Ikon buka tab baru"
@@ -19,7 +20,7 @@
             width="20"
             height="20"
           >
-        </template>
+        </a>
       </BaseButton>
     </div>
   </div>

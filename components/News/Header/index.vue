@@ -8,10 +8,10 @@
         <div class="border-t-[3px] border-[#16A75C] max-w-[128px] mt-[26px]" />
       </div>
       <BaseButton class="hidden md:block max-h-[38px] text-[#16A75C] font-bold text-sm leading-[18px] rounded-lg border-[#16A75C]">
-        <a :href="`https://jabarprov.go.id/pencarian/berita?q=al%20jabbar`" target="_blank">
-          Lihat Semua Berita
-        </a>
-        <template #icon-right>
+        <a href="https://jabarprov.go.id/pencarian/berita?q=al%20jabbar" target="_blank" class="flex justify-between w-full">
+          <p class="mr-[10px]">
+            Lihat Semua Berita
+          </p>
           <img
             src="/icons/open-tab.svg"
             alt="Ikon buka tab baru"
@@ -19,7 +19,7 @@
             width="20"
             height="20"
           >
-        </template>
+        </a>
       </BaseButton>
     </div>
   </div>
