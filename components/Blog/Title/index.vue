@@ -9,11 +9,11 @@
       </BaseButton>
     </NuxtLink>
     <div class="flex flex-col lg:items-center pt-6 md:pt-[60px] gap-[26px] mb-10">
-      <h1 class="text-[32px] md:text-4xl font-medium leading-relaxed text-gray-900">
+      <h1 class="text-[32px] md:text-4xl font-medium leading-[51px] md:leading-[58px] text-gray-900">
         {{ title }}
       </h1>
       <div class="w-32 border-2 border-green-600" />
-      <p class="text-gray-700 font-light text-sm md:text-base lg:text-center max-w-[832px]">
+      <p class="text-gray-700 font-light text-sm md:text-base lg:text-center max-w-[832px]leading-[23px] md:leading-[26px]">
         {{ subtitle }}
       </p>
     </div>
