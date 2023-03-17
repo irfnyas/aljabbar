@@ -1,9 +1,10 @@
 <template>
-  <div>
+  <div class="relative max-h-[480px] md:max-h-[540px] lg:max-h-[580px] xl:max-h-[720px]">
     <HeroImage
       :images="listImage"
-      class="max-h-[480px] md:max-h-[540px] lg:max-h-[580px] xl:max-h-[720px]"
+      class="h-full w-full"
     />
+    <HeroActivities class="absolute bottom-0 w-full lg:top-0 lg:h-full" />
   </div>
 </template>
 
