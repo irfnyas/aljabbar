@@ -6,6 +6,7 @@
         :key="index"
         :menu="menu"
         :show-children="index === currentIndex"
+        :class="{'text-green-600 font-bold border-b border-green-600': isActivePage(menu.title)}"
         @click="toggle(menu, index)"
         @menuClicked="onChildClick"
       />
@@ -35,6 +36,13 @@ export default {
     onChildClick() {
       this.currentIndex = null
       this.$emit('closeList')
+    },
+    isActivePage (menu) {
+      const profiles = ['sejarah', 'keistimewaan', 'fasilitas']
+      if (menu === 'Profil') {
+        return profiles.includes(this.$route.name)
+      }
+      return menu.toLowerCase() === this.$route.name
     }
   }
 }

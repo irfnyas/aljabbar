@@ -15,6 +15,7 @@
           :key="index"
         >
           <NavbarItem
+            :class="{'text-green-600 font-bold border-b border-green-600': isActivePage(menu.title)}"
             :menu="menu"
             :show-children="index === currentIndex"
             @click="toggle(menu, index)"
@@ -40,7 +41,14 @@ export default {
       this.currentIndex = this.currentIndex === index && menu.items?.length
         ? null
         : index
+    },
+    isActivePage (menu) {
+      const profiles = ['sejarah', 'keistimewaan', 'fasilitas']
+      if (menu === 'Profil') {
+        return profiles.includes(this.$route.name)
+      }
+      return menu.toLowerCase() === this.$route.name
     }
-  }
+  },
 }
 </script>
