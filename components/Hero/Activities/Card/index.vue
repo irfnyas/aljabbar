@@ -11,7 +11,7 @@
       <h5 class="px-3 py-1 bg-black/40 group-hover:bg-white/10 transition-colors rounded-[27px] text-[#BDBDBD] text-xs font-bold">
         Telah Selesai
       </h5>
-      <button class="flex items-center">
+      <button class="flex items-center" @click="$emit('onDetail')">
         <p class="mr-2 text-white group-hover:text-[#16A75C]">
           Detail
         </p>

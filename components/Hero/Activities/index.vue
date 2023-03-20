@@ -1,15 +1,15 @@
 <template>
   <div :class="{
     'flex flex-col justify-center items-center lg:max-w-[485px] bg-gradient-to-t from-[#000000]/0 to-[#000000]/80 text-white min-h-[100px] transition-all w-full py-4 px-7 lg:px-6 lg:pt-24 hover:cursor-pointer backdrop-blur-md': true,
-    '!min-h-[310px] !p-0': clicked
+    '!min-h-[310px] !p-0': isExpanded
   }"
   >
     <button
       :class="{
         'flex justify-between lg:justify-center items-center w-full transition-all lg:mb-8': true,
-        'mb-8 px-7 pt-4': clicked
+        'mb-8 px-7 pt-4': isExpanded
       }"
-      @click="clicked = !clicked"
+      @click="isExpanded = !isExpanded"
     >
       <div class="flex flex-col items-start">
         <h1 class="leading-[19px] mb-1 lg:text-xl lg:leading-6">
@@ -34,8 +34,9 @@
         <HeroActivitiesCard
           :class="{
             'hidden lg:flex min-w-[85vw] md:min-w-[40vw] lg:min-w-0': true,
-            '!flex': clicked
+            '!flex': isExpanded
           }"
+          @onDetail="showModal = true"
         />
       </li>
     </ul>
@@ -51,6 +52,7 @@
         >
       </template>
     </BaseButton>
+    <ActivitiesModal :show="showModal" @close="showModal = false" />
   </div>
 </template>
 
@@ -58,12 +60,9 @@
 export default {
   data() {
     return {
-      clicked: false
+      isExpanded: false,
+      showModal: false
     }
   }
 }
 </script>
-
-<style>
-
-</style>

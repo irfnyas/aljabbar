@@ -543,3 +543,9 @@ export const activityStatus = {
   ongoing: 'Sedang Berlangsung',
   coming: 'Akan Datang'
 }
+
+export const activityTabs = Object.freeze({
+  KEGIATAN: 'KEGIATAN',
+  PENYELENGGARA: 'PENYELENGGARA',
+  PEMATERI: 'PEMATERI'
+})
