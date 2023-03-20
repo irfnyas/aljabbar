@@ -39,7 +39,7 @@ export default {
       activities: [],
       imgPreview: '',
       query: {
-        isToday: true
+        is_today: true
       }
     }
   },
@@ -53,7 +53,7 @@ export default {
 
       // filter today or coming activities
       const arrayData = []
-      if (data.length && !this.query.isToday) {
+      if (data.length && !this.query.is_today) {
         const comingData = data.filter(item => isAfterToday(item.date))
 
         comingData.forEach(element => {
@@ -84,7 +84,7 @@ export default {
   },
   watch: {
     getSelectedTime (value) {
-      this.query.isToday = value === 'today'
+      this.query.is_today = value === 'today'
       this.getActivities()
     }
   }

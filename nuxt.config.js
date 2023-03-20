@@ -23,6 +23,7 @@ export default {
   plugins: [
     '~/plugins/vue-lazy-load',
     '~/plugins/swiper',
+    '~/plugins/jabar-design-system.js',
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -60,6 +61,9 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+    transpile: [
+      '@jabardigitalservice/jds-design-system',
+    ],
     postcss: {
       postcssOptions: {
         plugins: {

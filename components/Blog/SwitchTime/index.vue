@@ -37,6 +37,9 @@ export default {
     switchActivities(payload) {
       this.$store.dispatch('switchTime/setSelectedTime', payload)
     }
-  }
+  },
+  mounted (){
+    this.$store.dispatch('switchTime/setSelectedTime', 'today')
+  },
 }
 </script>
