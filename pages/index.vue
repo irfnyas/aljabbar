@@ -4,8 +4,7 @@
     <PrayerTime />
     <Facilities />
     <ActivitiesHome />
-    <!-- @todo: delete dummy padding -->
-    <VisitRules class="mt-[60px]" />
+    <VisitRules />
     <Videos />
     <News />
   </div>

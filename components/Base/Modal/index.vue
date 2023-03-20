@@ -3,7 +3,7 @@
     <div
       v-if="show"
       id="modal"
-      class="fixed w-full h-full inset-0 bg-black bg-opacity-40 backdrop-filter backdrop-blur-sm z-[100] flex justify-center items-center overflow-hidden"
+      class="fixed w-full h-full inset-0 bg-black bg-opacity-60 backdrop-filter backdrop-blur-sm z-[100] flex justify-center items-center overflow-hidden"
     >
       <!-- Bottom Sheet (Mobile Only) -->
       <section

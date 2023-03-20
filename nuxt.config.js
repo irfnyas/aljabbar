@@ -22,6 +22,7 @@ export default {
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
     '~/plugins/vue-lazy-load',
+    '~/plugins/vue-touch-events',
     '~/plugins/swiper',
     '~/plugins/jabar-design-system.js',
   ],
