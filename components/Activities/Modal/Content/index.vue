@@ -54,7 +54,7 @@
           </p>
           <p class="py-1 w-fit rounded-[27px] text-[#424242] text-sm leading-[23px] mt-1">
             <!-- @todo: couldn't found description props on API data -->
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quam consectetur consectetur imperdiet facilisi dictum non quam dui.
+            -
           </p>
         </div>
       </div>

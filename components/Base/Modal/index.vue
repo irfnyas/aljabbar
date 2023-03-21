@@ -45,7 +45,7 @@
       </section>
 
       <!-- Default Modal (Tablet and Dekstop) -->
-      <section class="modal__body hidden md:flex flex-col bg-white rounded-lg overflow-hidden max-h-[90%] max-w-[800px]">
+      <section class="modal__body hidden md:flex flex-col bg-white rounded-lg overflow-hidden max-h-[90%] max-w-[700px] lg:max-w-[800px]">
         <slot name="header" />
         <slot />
         <slot name="footer">

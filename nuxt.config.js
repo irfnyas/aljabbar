@@ -1,7 +1,7 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'Jabar Bertasbih',
+    title: 'Masjid Raya Al Jabbar',
     htmlAttrs: {
       lang: 'en',
     },
