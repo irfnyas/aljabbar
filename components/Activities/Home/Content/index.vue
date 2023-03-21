@@ -17,7 +17,7 @@
             {{ `${item.jam_mulai.slice(0,5)} WIB` }}
           </div>
           <div class="flex flex-col justify-center items-start gap-3 w-full md:w-[414px]">
-            <p class="text-lg">
+            <p class="text-lg line-clamp-2">
               {{ item.nama_kegiatan }}
             </p>
             <BaseButton :class="{
@@ -50,12 +50,14 @@
         Belum ada Agenda Kegiatan
       </div>
       <div class="w-full h-full md:w-[685px] md:h-[80px] p-6 border border-gray-200 flex items-center justify-center rounded-b-lg">
-        <BaseButton class="text-sm text-green-600 border-none">
-          Lihat Kegiatan Lainnya
-          <template #icon-right>
-            <img width="16" height="16" src="/icons/open-tab.svg" alt="Ikon Buka Tab Baru">
-          </template>
-        </BaseButton>
+        <NuxtLink to="/kegiatan">
+          <BaseButton class="text-sm text-green-600 border-none">
+            Lihat Kegiatan Lainnya
+            <template #icon-right>
+              <img width="16" height="16" src="/icons/open-tab.svg" alt="Ikon Buka Tab Baru">
+            </template>
+          </BaseButton>
+        </NuxtLink>
       </div>
     </div>
     <div v-if="image" class="flex justify-center mt-6 xl:mt-0">
