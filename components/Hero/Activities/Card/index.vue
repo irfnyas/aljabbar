@@ -11,9 +11,9 @@
       <h5
         :class="{
           'px-3 py-1 bg-[#000000]/40 transition-colors rounded-[27px] text-xs font-bold': true,
-          'text-gray-400': activity.status === done,
+          'text-[#757575]': activity.status === done,
           'text-green-600': activity.status === ongoing,
-          'text-yellow-800': activity.status === coming
+          'text-[#FF9500]': activity.status === coming
         }"
       
       >

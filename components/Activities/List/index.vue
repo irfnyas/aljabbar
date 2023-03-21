@@ -40,9 +40,9 @@
                 <span
                   :class="{
                     'py-2 px-4 rounded-[27px] text-xs': true,
-                    'bg-gray-200 text-gray-600': activity.status === done,
+                    'bg-[#EEEEEE] text-[#757575]': activity.status === done,
                     'bg-white text-green-600': activity.status === ongoing,
-                    'bg-[#FCF9EF] text-yellow-800': activity.status === coming
+                    'bg-[#FCF9EF] text-[#FF9500]': activity.status === coming
                   }"
                 >
                   {{ activity.status }}
@@ -62,8 +62,8 @@
       </div>
     </div>
   </div>
-  <div v-else class="w-full h-full flex">
-    Belum ada Agenda Kegiatan
+  <div v-else class="w-full h-[400px]">
+    <ActivitiesEmpty />
   </div>
 </template>
 
