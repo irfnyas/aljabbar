@@ -48,12 +48,12 @@
                   {{ activity.status }}
                 </span>
               </div>
-              <button @click="$emit('onDetail', activity.id)">
+              <button class="w-[28px] h-[28px] rounded-full bg-[#E0E0E0] hover:bg-[#16A75C] flex justify-center items-center" @click="$emit('onDetail', activity.id)">
                 <img
                   src="/icons/open-tab-circle.svg"
                   alt="Ikon lihat detail agenda"
-                  width="28"
-                  height="28"
+                  width="16.33"
+                  height="16.33"
                 >
               </button>
             </div>
