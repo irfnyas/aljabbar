@@ -1,7 +1,7 @@
 <template>
   <section class="flex flex-col xl:flex-row xl:justify-between">
     <div class="flex flex-col items-center">
-      <div v-if="data.length" class="flex flex-col items-center">
+      <div v-if="data.length" class="flex flex-col items-center w-full">
         <div
           v-for="(item, index) in data"
           :key="index"
