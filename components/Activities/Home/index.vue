@@ -40,7 +40,8 @@ export default {
       imgPreview: '',
       query: {
         is_today: true
-      }
+      },
+      showModal: false
     }
   },
   mounted () {

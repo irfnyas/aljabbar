@@ -5,6 +5,7 @@
     <div class="flex flex-col justify-between gap-8 w-full h-full">
       <ActivitiesList
         :data="activities"
+        @onDetail="showModal = true"
       />
       <JdsPagination
         v-if="getSelectedTime !== 'today'"
@@ -18,6 +19,7 @@
         @per-page-change="perPageChange"
       />
     </div>
+    <ActivitiesModal :show="showModal" @close="showModal = false" />
   </main>
 </template>
 
@@ -40,7 +42,8 @@ export default {
         limit: 5,
       },
       totalRows: 0,
-      itemsPerPageOptions: [5, 10, 20]
+      itemsPerPageOptions: [5, 10, 15, 20],
+      showModal: false
     }
   },
   watch: {
@@ -66,6 +69,9 @@ export default {
       this.query.page = meta.page
       this.query.limit = meta.limit
       this.totalRows = meta.total
+      if (meta.total <= 5) {
+        this.itemsPerPageOptions = [5]
+      } 
     },
     nextPage (value) {
       this.query.page = value
