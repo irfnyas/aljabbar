@@ -4,9 +4,9 @@
       <img src="/icons/map.svg" alt="Ikon Map" aria-hidden="true" height="24" width="24">
       <div class="flex flex-col">
         <p class="font-bold text-base text-[#212121] leading-6">Alamat Lengkap</p>
-        <p class="text-[#424242] text-sm leading-6">
+        <a href="https://goo.gl/maps/cnxeTzAyf9a9cuGy9" class="text-[#424242] text-sm leading-6">
           Jl. Cimencrang No.14, Cimenerang, Kec. Gedebage, Kota Bandung, Jawa Barat 40292
-        </p>
+        </a>
       </div>
     </div>
     <div class="grid grid-cols-[24px,auto] gap-4">

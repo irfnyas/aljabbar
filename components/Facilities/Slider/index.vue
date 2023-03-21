@@ -33,27 +33,32 @@ export default {
         {
           id: 1,
           image: '/images/facilities/registration.png',
-          title: 'Pendaftaran Kegiatan Taklim/Pengajian'
+          title: 'Pendaftaran Kegiatan Taklim/Pengajian',
+          link: 'https://s.id/permohonan-mraj'
         },
         {
           id: 2,
           image: '/images/facilities/gallery.png',
-          title: 'Galeri Rasulullah Masjid Raya Al Jabbar'
+          title: 'Galeri Rasulullah Masjid Raya Al Jabbar',
+          link: 'https://masjidraya-aljabbar.jabarprov.go.id/'
         },
         {
           id: 3,
           image: '/images/facilities/facilities.png',
-          title: 'Fasilitas Masjid Raya Al-Jabbar'
+          title: 'Fasilitas Masjid Raya Al-Jabbar',
+          link: '/fasilitas',
         },
         {
           id: 4,
           image: '/images/facilities/direction.png',
-          title: 'Petunjuk Arah Ke Masjid Raya Al-Jabbar'
+          title: 'Petunjuk Arah Ke Masjid Raya Al-Jabbar',
+          link: 'https://goo.gl/maps/nYh6VSeCCq16rfeZ7'
         },
         {
           id: 5,
           image: '/images/facilities/profile.png',
-          title: 'Download Booklet Profil Masjid Raya Al Jabbar'
+          title: 'Download Booklet Profil Masjid Raya Al Jabbar',
+          link: 'https://drive.google.com/file/d/1JiLpx1eRkr7PPX9Lk2NH3fPzJmtkl39-/view'
         }
        ],
       swiperReady: false,
