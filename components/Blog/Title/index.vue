@@ -1,13 +1,15 @@
 <template>
   <div>
-    <NuxtLink v-if="showBackButton" to="/">
-      <BaseButton class="bg-gray-100 text-green-600 text-sm my-[22px]">
-        <template #icon-left>
-          <img width="19.5" height="16" src="/icons/arrow-left.svg" alt="Icon Arrow Left">
-        </template>
-        Kembali
-      </BaseButton>
-    </NuxtLink>
+    <div class="flex items-start">
+      <NuxtLink v-if="showBackButton" to="/">
+        <BaseButton class="bg-gray-100 text-green-600 text-sm my-[22px]">
+          <template #icon-left>
+            <img width="19.5" height="16" src="/icons/arrow-left.svg" alt="Icon Arrow Left">
+          </template>
+          Kembali
+        </BaseButton>
+      </NuxtLink>
+    </div>
     <div class="flex flex-col lg:items-center pt-6 md:pt-[60px] gap-[26px] mb-10">
       <h1 class="text-[32px] md:text-4xl font-medium leading-[51px] md:leading-[58px] text-gray-900">
         {{ title }}

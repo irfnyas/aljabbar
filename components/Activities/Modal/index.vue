@@ -9,9 +9,9 @@
         <h2
           :class="{
             'flex w-fit items-center rounded-[27px] py-[5.5px] px-3 font-medium text-xs leading-[19px] mb-2': true,
-            'bg-[#F5F5F5] text-gray-600': activity.status === done,
+            'bg-[#EEEEEE] text-[#757575]': activity.status === done,
             'bg-[#16A75C] text-white': activity.status === ongoing,
-            'bg-[#FCF9EF] text-yellow-800': activity.status === coming
+            'bg-[#FCF9EF] text-[#FF9500]': activity.status === coming
           }">
           <svg v-if="activity.status === ongoing" height="10" width="10" class="min-w-[10px] mr-[7px]">
             <circle cx="5" cy="5" r="5" fill="#FFFFFF" />

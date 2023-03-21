@@ -12,9 +12,12 @@
         <ActivitiesHomeContent
           :data="activities"
           :image="imgPreview"
+          @onDetail="onActivityDetail"
+          @onSelectActivity="changeImgPreview"
         />
       </div>
     </BaseContainer>
+    <ActivitiesModal :show="showModal" :activity-id="activityId" @close="showModal = false" />
   </div>
 </template>
 
@@ -40,7 +43,9 @@ export default {
       imgPreview: '',
       query: {
         is_today: true
-      }
+      },
+      showModal: false,
+      activityId: null,
     }
   },
   mounted () {
@@ -79,6 +84,15 @@ export default {
         }
       } else {
         this.imgPreview = ''
+      }
+    },
+    onActivityDetail(id) {
+      this.activityId = id
+      this.showModal = true
+    },
+    changeImgPreview (image) {
+      if (image) {
+        this.imgPreview = image
       }
     }
   },
