@@ -109,7 +109,7 @@ export const profile = Object.freeze(
         },
         {
           id: 7,
-          title: 'Masjid Dilengkapi Museum',
+          title: 'Masjid Dilengkapi Galeri',
           content: [
             'Selain sebagai tempat ibadah, di bawah lantai salat Masjid Raya Al Jabbar juga akan menyuguhkan museum Rasulullah SAW serta sejarah Islam di Jawa Barat dengan penggunaan teknologi digital.'
           ],
@@ -136,7 +136,7 @@ export const profile = Object.freeze(
         },
         {
           id: 10,
-          title: 'Lantai Mezanin',
+          title: 'Lantai Mezzanine',
           content: [
             'Lantai yang berada di atas area salat utama ini dikhususkan untuk area salat jemaah perempuan. Dengan pemandangan yang berbeda, abadikan momen dengan latar lafaz Allah dan interior masjid yang indah.'
           ],
@@ -147,14 +147,14 @@ export const profile = Object.freeze(
           id: 11,
           title: 'Relung',
           content: [
-            'Sebelum meninggalkan area salat, berhentilah di tiap relung. Relung ini berjumlah 27 buah yang merepresentasikan 27 kota dan kabupaten di Jawa Barat. Tiap guratan dalam relung merupakan karya ratusan pengrajin lokal yang dikerjakan manual.'
+            'Sebelum meninggalkan area salat, berhentilah di tiap relung. Relung ini berjumlah 27 buah yang merepresentasikan 27 kota dan kabupaten di Jawa Barat. Tiap guratan dalam relung merupakan karya ratusan pengrajin dari Boyolali yang dikerjakan manual.'
           ],
           isImageFirst: false,
           image: '/images/features/relung.png'
         },
         {
           id: 12,
-          title: 'Patung Al Jabbar',
+          title: 'Sculpture Al Jabbar',
           content: [
             'Siapa sangka bahwa karya seni yang menyambut kita di area depan adalah lafaz Al Jabbar yang dipelintir? Inilah karya salah satu seniman asal Bandung. Berlatarkan patung Al Jabbar sekaligus bangunan masjid secara utuh, ini bisa spot foto terbaikmu!'
           ],
@@ -165,7 +165,7 @@ export const profile = Object.freeze(
           id: 13,
           title: 'Minaret',
           content: [
-            'Empat minaret yang berada di sudut-sudut masjid didesain dengan kulit yang dibuat seolah terpelintir. Kulit minaret dihiasi dengan warna-warna yang senada dengan kaca bangunan masjid.'
+            'Empat minaret yang berada di sudut-sudut masjid didesain dengan kulit. Kulit minaret dihiasi dengan warna-warna yang senada dengan kaca bangunan masjid.'
           ],
           isImageFirst: false,
           image: '/images/features/minaret.png'
@@ -177,7 +177,7 @@ export const profile = Object.freeze(
             'Bagian puncak masjid didesain dengan elemen tusuk sate seperti yang terdapat pada Kantor Gubernur Jawa Barat. Lima bola pada tusuk sate melambangkan lima rukun Islam.'
           ],
           isImageFirst: true,
-          image: ''
+          image: '/images/features/makara.png'
         },
         {
           id: 15,
@@ -201,7 +201,7 @@ export const profile = Object.freeze(
     },
     facilities: {
       title: 'Fasilitas Masjid Raya Al Jabbar',
-      subtitle: 'Fasilitas yang terdapat di Masjid Raya Al Jabbar meliputi tempat wudhu outdoor, area shalat utama, lantai mezanin, relung, museum Rasulullah, koridor, jembatan nabi musa, patung Al Jabbar, perpustakaan, ruang edukasi dan danau wisata.',
+      subtitle: 'Fasilitas yang terdapat di Masjid Raya Al Jabbar meliputi tempat wudhu outdoor, area shalat utama, lantai mezzanine, relung, museum Rasulullah, koridor, jembatan nabi musa, patung Al Jabbar, perpustakaan, ruang edukasi dan danau wisata.',
       data: [
         {
           id: 1,
@@ -246,7 +246,7 @@ export const profile = Object.freeze(
             'Jembatan Nabi Musa menjadi penghubung antara plaza dengan halaman utama masjid. Jembatan ini berkisah tentang salah satu mukjizat Nabi Musa AS, yaitu dapat membelah lautan. Berjalan di antara air mancur yang tingginya hampir 2x manusia normal membuat kita seakan berjalan di antara lautan.'
           ],
           isImageFirst: false,
-          image: ''
+          image: '/images/facilities/jembatan-nabi-musa.png'
         },
         {
           id: 6,
@@ -255,7 +255,7 @@ export const profile = Object.freeze(
             'Kawasan masjid menghadirkan taman Nabi Adam, taman Nabi Nuh, taman Nabi Ibrahim, taman Nabi Yunus, dan taman Nabi Isa. Kelima taman memiliki desain yang berbeda sesuai dengan kisah masing-masing nabi serta menghadirkan keanekaragaman tanaman di Jawa Barat.'
           ],
           isImageFirst: true,
-          image: ''
+          image: '/images/facilities/taman-tematik-nabi.png'
         },
         {
           id: 7,
@@ -264,7 +264,7 @@ export const profile = Object.freeze(
             'Bagian koridor yang terhubung langsung dengan jembatan Nabi Musa diberikan aksen yang sedikit berbeda. Kanopi pada titik ini ditinggikan sehingga membentuk elemen seperti gerbang.'
           ],
           isImageFirst: false,
-          image: ''
+          image: '/images/facilities/gerbang-pelataran.png'
         },
         {
           id: 8,
@@ -282,7 +282,7 @@ export const profile = Object.freeze(
             'Bangunan masjid berdiri di depan pelataran besar yang dapat diakses melalui jembatan Nabi Musa. Pelataran menjadi ruang tambahan yang dapat menampung jemaah di hari-hari raya.'
           ],
           isImageFirst: false,
-          image: ''
+          image: '/images/facilities/selasar-pelataran.png'
         },
         {
           id: 10,
@@ -309,7 +309,7 @@ export const profile = Object.freeze(
             'Plaza depan yang berada dekat dengan area drop-off ini dirancang berupa taman melingkar dengan patung berbentuk kaligrafi Al-Jabbar di tengahnya.'
           ],
           isImageFirst: true,
-          image: ''
+          image: '/images/facilities/plaza-depan.png'
         },
         {
           id: 13,
@@ -336,7 +336,7 @@ export const profile = Object.freeze(
             'Ruangan yang disewakan untuk para pengusaha lokal menjalankan usahanya. Berdekatan dengan area cafetaria, jemaah yang hadir bisa sekaligus berbelanja dengan lebih nyaman.'
           ],
           isImageFirst: false,
-          image: ''
+          image: '/images/facilities/retail.png'
         },
         {
           id: 16,
@@ -345,24 +345,25 @@ export const profile = Object.freeze(
             'Area khusus bagi para jemaah untuk beristirahat dan menikmati santapan yang dipesan dan dimasak langsung dengan konsep dapur terbuka.'
           ],
           isImageFirst: true,
-          image: ''
+          image: '/images/facilities/cafetaria.png'
         },
-        {
-          id: 17,
-          title: 'Air Mancur Plaza',
-          content: [
-            'Air mancur di area jembatan dapat meng-highlight momen penting kisah Nabi Musa yang membelah lautan atas kuasa Allah SWT.'
-          ],
-          isImageFirst: false,
-          image: '/images/facilities/air-mancur-plaza.png'
-        },
+        // Temporary hide, waiting image asset
+        // {
+        //   id: 17,
+        //   title: 'Air Mancur Plaza',
+        //   content: [
+        //     'Air mancur di area jembatan dapat meng-highlight momen penting kisah Nabi Musa yang membelah lautan atas kuasa Allah SWT.'
+        //   ],
+        //   isImageFirst: false,
+        //   image: ''
+        // },
         {
           id: 18,
           title: 'Kolam Reflektif',
           content: [
             'Kolam yang mengelilingi keempat sisi masjid akan memperlihatkan pantulan Masjid Raya Al Jabbar terutama dengan keindahan cahayanya di malam hari. Di balik itu, keberadaan kolam reflektif mengingatkan kita sebagai manusia untuk terus berefleksi diri.'
           ],
-          isImageFirst: true,
+          isImageFirst: false,
           image: '/images/facilities/kolam-reflektif.png'
         },
         {
@@ -371,18 +372,19 @@ export const profile = Object.freeze(
           content: [
             'Dengan desain masjid yang dibuat lebih inklusif, tersedia lift dan eskalator di dua sisi jalan masuk area salat utama demi memberikan kemudahan akses bagi seluruh jamaah.'
           ],
-          isImageFirst: false,
+          isImageFirst: true,
           image: '/images/facilities/lift-eskalator.png'
         },
-        {
-          id: 20,
-          title: 'Multimedia permanen dan temporer',
-          content: [
-            'Seluruh area dilengkapi dengan perangkat multimedia dengan teknologi terkini untuk memberikan pengalaman terbaik bagi jemaah selama mengunjungi masjid.'
-          ],
-          isImageFirst: true,
-          image: ''
-        },
+        // Temporary hide, waiting image asset
+        // {
+        //   id: 20,
+        //   title: 'Multimedia permanen dan temporer',
+        //   content: [
+        //     'Seluruh area dilengkapi dengan perangkat multimedia dengan teknologi terkini untuk memberikan pengalaman terbaik bagi jemaah selama mengunjungi masjid.'
+        //   ],
+        //   isImageFirst: true,
+        //   image: ''
+        // },
         {
           id: 21,
           title: 'Ruang Edukasi',
@@ -399,7 +401,7 @@ export const profile = Object.freeze(
             'Terdapat 4 ruang kelas yang bisa digunakan dalam rangka pembelajaran dan diskusi keagamaan.'
           ],
           isImageFirst: true,
-          image: ''
+          image: '/images/facilities/classroom.png'
         },
         {
           id: 23,
@@ -419,31 +421,33 @@ export const profile = Object.freeze(
           isImageFirst: true,
           image: '/images/facilities/control-room.png'
         },
-        {
-          id: 25,
-          title: 'Ruang Pengamanan Masjid',
-          content: [
-            'Ruangan di area depan masjid dengan bentuk menyerupai mesjid kecil yang untuk mendapatkan informasi dan tempat pengumpulan barang yang hilang.'
-          ],
-          isImageFirst: false,
-          image: ''
-        },
-        {
-          id: 26,
-          title: 'Wifi Gratis',
-          content: [
-            'Terdapat wifi gratis yang bisa jemaah manfaatkan di seluruh area masjid.'
-          ],
-          isImageFirst: true,
-          image: ''
-        },
+        // Temporary hide, waiting image asset
+        // {
+        //   id: 25,
+        //   title: 'Ruang Pengamanan Masjid',
+        //   content: [
+        //     'Ruangan di area depan masjid dengan bentuk menyerupai mesjid kecil yang untuk mendapatkan informasi dan tempat pengumpulan barang yang hilang.'
+        //   ],
+        //   isImageFirst: false,
+        //   image: ''
+        // },
+        // Temporary hide, waiting image asset
+        // {
+        //   id: 26,
+        //   title: 'Wifi Gratis',
+        //   content: [
+        //     'Terdapat wifi gratis yang bisa jemaah manfaatkan di seluruh area masjid.'
+        //   ],
+        //   isImageFirst: true,
+        //   image: ''
+        // },
         {
           id: 27,
           title: 'Ruang Naskah Tua Galery Rasulullah',
           content: [
             'Ruangan yang berisikan replika naskah-naskah di jaman Rasulullah SAW.'
           ],
-          isImageFirst: true,
+          isImageFirst: false,
           image: '/images/facilities/naskah-tua.png'
         },
       ]
@@ -479,7 +483,7 @@ export const profile = Object.freeze(
             'Keistimewaan lainnya ada pada lantai dasar atau ma’rodh yang berisi museum sejarah Rasulullah SAW, sejarah perkembangan Islam di tanah air, dan sejarah Islam di Jawa Barat. Hal ini menjadikan Masjid Raya Al Jabbar sebagai satu-satunya masjid di Indonesia yang memiliki pusat edukasi berupa museum dengan penggunaan teknologi digital terkini.'
           ],
           isImageFirst: true,
-          image: ''
+          image: '/images/features/relung.png'
         },
         {
           id: 4,
@@ -488,7 +492,7 @@ export const profile = Object.freeze(
             'Selain bangunan masjid dan danau, di lahan seluas 26 Ha ini juga terdapat taman-taman tematik tentang kenabian yang menarik untuk dikunjungi oleh berbagai kalangan. Di sisi timur masjid, berdiri sebuah patung kaligrafi “Al Jabbar” berwarna emas karya seniman terkemuka. Patung ini berdiri di atas plaza bundar yang permukaannya dilapisi teraso buatan tangan dengan motif Wadasan berwarna biru dan kuning cerah yang memberikan kesan elegan. Kemudian, di sisi timur ini juga terdapat beberapa aksentuasi khas masjid Turki yaitu pelataran besar dikelilingi koridor dengan naungan dihiasi kaca patri warna-warni, serta paviliun wudu dengan keran air bertempat duduk yang berhiaskan mozaik cantik karya tangan perajin Jawa Barat.'
           ],
           isImageFirst: false,
-          image: ''
+          image: '/images/features/masjid-dilengkapi-museum.png'
         },
         {
           id: 5,
