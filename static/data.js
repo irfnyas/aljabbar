@@ -2,7 +2,7 @@ export const navigationMenus = [
   {
     id: 1,
     title: 'Kajian',
-    link: 'https://masjidraya-aljabbar.jabarprov.go.id/',
+    link: 'https://www.youtube.com/@masjidaljabbartv',
     items: []
   },
   {
