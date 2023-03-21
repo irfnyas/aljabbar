@@ -29,8 +29,12 @@
         >
       </div>
     </button>
-    <!-- @todo: create empty state here -->
-    <ul class="flex lg:flex-col overflow-x-scroll lg:overflow-y-scroll lg:max-h-[375px] w-full gap-6 px-7 lg:px-0 lg:py-3">
+
+    <!-- Activity List -->
+    <ul
+      v-if="activities.length"
+      class="flex lg:flex-col overflow-x-scroll lg:overflow-y-scroll lg:max-h-[375px] w-full gap-6 px-7 lg:px-0 lg:py-3"
+    >
       <li v-for="(activity, index) in activities" :key="index">
         <HeroActivitiesCard
           :activity="activity"
@@ -42,7 +46,18 @@
         />
       </li>
     </ul>
-    <BaseButton class="hidden lg:block mt-8 bg-[#16A75C] border-[#16A75C]">
+
+    <!-- Empty State -->
+    <HeroActivitiesEmptyState
+      v-else
+      :class="{
+        'hidden lg:flex': true,
+        '!flex': isExpanded
+      }"
+    />
+
+    <!-- Button -->
+    <BaseButton v-if="activities.length" class="hidden lg:block mt-8 bg-[#16A75C] border-[#16A75C]">
       Lihat Kegiatan Lainnya
       <template #icon-right>
         <img
@@ -54,6 +69,8 @@
         >
       </template>
     </BaseButton>
+
+    <!-- Modal -->
     <ActivitiesModal :show="showModal" :activity-id="activityId" @close="showModal = false" />
   </div>
 </template>
