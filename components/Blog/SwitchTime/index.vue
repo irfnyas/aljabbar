@@ -1,6 +1,6 @@
 <template>
   <div class="flex justify-center">
-    <div class="w-[328px] h-[52px] rounded-[52px] bg-gray-100 flex items-center">
+    <div class="switch-time w-full sm:w-[328px] h-[52px] rounded-[52px] bg-gray-100 flex items-center justify-center">
       <button
         :class="{
           'w-[156px] h-11 px-4 py-3 m-1 flex items-center justify-center': true,
@@ -43,3 +43,11 @@ export default {
   },
 }
 </script>
+
+<style scoped>
+@media (min-width: 360px) {
+  .switch-time {
+    width: 328px;
+  }
+}
+</style>
