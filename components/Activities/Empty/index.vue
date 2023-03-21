@@ -9,7 +9,7 @@
       >
     </div>
     <div class="flex flex-col justify-center items-center ">
-      <h2 class="text-[#1A4373] font-bold leading-[26px]">
+      <h2 class="text-[#1A4373] font-bold leading-[26px] text-center">
         Tidak ada kegiatan di hari ini
       </h2>
       <p class="text-[#757575] text-sm font-light leading-[23px] text-center">
