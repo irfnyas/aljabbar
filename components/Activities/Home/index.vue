@@ -13,6 +13,7 @@
           :data="activities"
           :image="imgPreview"
           @onDetail="onActivityDetail"
+          @onSelectActivity="changeImgPreview"
         />
       </div>
     </BaseContainer>
@@ -88,6 +89,11 @@ export default {
     onActivityDetail(id) {
       this.activityId = id
       this.showModal = true
+    },
+    changeImgPreview (image) {
+      if (image) {
+        this.imgPreview = image
+      }
     }
   },
   watch: {

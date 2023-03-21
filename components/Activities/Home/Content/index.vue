@@ -6,12 +6,13 @@
           v-for="(item, index) in data"
           :key="index"
           :class="{
-            'flex flex-col md:flex-row justify-between w-full h-full md:w-[685px] md:h-[140px] p-6 gap-4 md:gap-0 border border-gray-200': true,
+            'flex flex-col md:flex-row justify-between w-full h-full md:w-[685px] md:h-[140px] p-6 gap-4 md:gap-0 border border-gray-200 cursor-pointer': true,
             'rounded-t-lg': index === 0 && item.status !== ongoing,
             'bg-[#EEEEEE] text-[#757575]': item.status === done,
             'bg-green-600 text-white w-full md:w-[720px] xl:w-[733px] md:rounded-lg border-none md:shadow-lg': item.status === ongoing,
             'text-gray-800': item.status === coming,
           }"
+          @click="$emit('onSelectActivity', item.poster_kegiatan)"
         >
           <div class="flex md:justify-center items-center text-base">
             {{ `${item.jam_mulai.slice(0,5)} WIB` }}
