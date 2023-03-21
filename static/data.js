@@ -2,7 +2,7 @@ export const navigationMenus = [
   {
     id: 1,
     title: 'Kajian',
-    link: '/kajian',
+    link: 'https://masjidraya-aljabbar.jabarprov.go.id/',
     items: []
   },
   {
@@ -14,7 +14,7 @@ export const navigationMenus = [
   {
     id: 3,
     title: 'Galeri Rasulullah',
-    link: 'https://www.youtube.com/',
+    link: 'https://masjidraya-aljabbar.jabarprov.go.id/',
     items: []
   },
   {
