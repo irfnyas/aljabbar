@@ -55,5 +55,5 @@ jobs:
           git config user.name "Github Action"
           git checkout master
           git add deployment.yaml
-          git commit -m "chore: update superapp web images ${{ steps.vars.outputs.sha_short }}-test to staging"
+          git commit -m "chore: update aljabbar web images ${{ steps.vars.outputs.sha_short }}-test to staging"
           git push origin master  

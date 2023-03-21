@@ -16,7 +16,7 @@
           Kegiatan Hari Ini
         </h1>
         <h2 class="font-semibold text-lg lg:text-[26px] leading-[21px] lg:leading-8">
-          Selasa, 31 Februari 2023
+          {{ currentDate }}
         </h2>
       </div>
       <div class="flex lg:hidden justify-center items-center p-[7px] rounded-full bg-[#FFFFFF]/60 w-6 h-6">
@@ -29,14 +29,16 @@
         >
       </div>
     </button>
+    <!-- @todo: create empty state here -->
     <ul class="flex lg:flex-col overflow-x-scroll lg:overflow-y-scroll lg:max-h-[375px] w-full gap-6 px-7 lg:px-0 lg:py-3">
-      <li v-for="index in 5" :key="index">
+      <li v-for="(activity, index) in activities" :key="index">
         <HeroActivitiesCard
+          :activity="activity"
           :class="{
             'hidden lg:flex min-w-[85vw] md:min-w-[40vw] lg:min-w-0': true,
             '!flex': isExpanded
           }"
-          @onDetail="showModal = true"
+          @onDetail="onActivityDetail"
         />
       </li>
     </ul>
@@ -52,16 +54,47 @@
         >
       </template>
     </BaseButton>
-    <ActivitiesModal :show="showModal" @close="showModal = false" />
+    <ActivitiesModal :show="showModal" :activity-id="activityId" @close="showModal = false" />
   </div>
 </template>
 
 <script>
+import { format } from '~/utils/date'
+
 export default {
+  async fetch() {
+    const params = {
+      is_today: true,
+      page: 1,
+      limit: 10
+    }
+    const response = await this.$axios.$get('/v1/activities', { params })
+    this.activities = [...response.data[0].payloads]
+  },
+  fetchOnServer: false,
   data() {
     return {
       isExpanded: false,
-      showModal: false
+      showModal: false,
+      activities: [],
+      activityId: null
+    }
+  },
+  computed: {
+    currentDate() {
+      const options = {
+        year: 'numeric',
+        month: 'short',
+        day: 'numeric',
+        weekday: 'long'
+      }
+      return format(new Date(), options)
+    }
+  },
+  methods: {
+    onActivityDetail(id) {
+      this.activityId = id
+      this.showModal = true
     }
   }
 }
