@@ -95,7 +95,6 @@ export default {
       }
     },
     onActivityDetail(id) {
-      console.log(id)
       this.activityId = id
       this.showModal = true
     }

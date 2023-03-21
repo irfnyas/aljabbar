@@ -20,10 +20,12 @@
             <p class="text-lg line-clamp-2">
               {{ item.nama_kegiatan }}
             </p>
-            <BaseButton :class="{
-              'text-sm font-medium border-none !p-0': true,
-              'text-green-600': item.status !== ongoing
+            <BaseButton
+              :class="{
+                'text-sm font-medium border-none !p-0': true,
+                'text-green-600': item.status !== ongoing
               }"
+              @click="$emit('onDetail', item.id)"
             >
               Selengkapnya
               <template #icon-right>
