@@ -1,7 +1,7 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'Jabar Bertasbih',
+    title: 'Masjid Raya Al Jabbar',
     htmlAttrs: {
       lang: 'en',
     },
@@ -20,7 +20,13 @@ export default {
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [],
+  plugins: [
+    '~/plugins/vue-lazy-load',
+    '~/plugins/vue-touch-events',
+    '~/plugins/swiper',
+    '~/plugins/jabar-design-system.js',
+    '~/plugins/vue-gtag.js'
+  ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -35,16 +41,33 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
+    'portal-vue/nuxt',
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
     // Workaround to avoid enforcing hard-coded localhost:3000: https://github.com/nuxt-community/axios-module/issues/308
-    baseURL: '/',
+    baseURL: 'http://localhost:3000',
+  },
+
+  publicRuntimeConfig: {
+    axios: {
+      browserBaseURL: process.env.BROWSER_API_URL
+    },
+    googleAnalyticsId: process.env.GOOGLE_ANALYTICS_ID
+  },
+
+  privateRuntimeConfig: {
+    axios: {
+      baseURL: process.env.API_URL
+    }
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+    transpile: [
+      '@jabardigitalservice/jds-design-system',
+    ],
     postcss: {
       postcssOptions: {
         plugins: {

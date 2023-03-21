@@ -1,9 +1,16 @@
 <template>
-  <h1 class="text-blue-400">Al-Jabbar</h1>
+  <div>
+    <Hero />
+    <PrayerTime />
+    <Facilities />
+    <ActivitiesHome />
+    <VisitRules />
+    <Videos />
+    <News />
+  </div>
 </template>
 
 <script>
 export default {
-  name: 'IndexPage'
 }
 </script>
