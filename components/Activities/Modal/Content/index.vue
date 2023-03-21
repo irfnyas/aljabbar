@@ -78,12 +78,16 @@
             Link Meeting
           </p>
           <a
-            href="https://s.id/LightningTalkITDEV"
+            v-if="activity.link_kegiatan"
+            :href="activity.link_kegiatan"
             target="_blank"
             class="py-1 w-fit rounded-[27px] text-[#424242] text-sm leading-[23px] mt-1"
           >
-            {{ activity?.link_kegiatan || '-' }}
+            {{ activity.link_kegiatan }}
           </a>
+          <p v-else class="py-1 w-fit rounded-[27px] text-[#424242] text-sm leading-[23px] mt-1">
+            -
+          </p>
         </div>
       </div>
     </div>

@@ -13,9 +13,10 @@
             'bg-[#16A75C] text-white': activity.status === ongoing,
             'bg-[#FCF9EF] text-[#FF9500]': activity.status === coming
           }">
-          <svg v-if="activity.status === ongoing" height="10" width="10" class="min-w-[10px] mr-[7px]">
-            <circle cx="5" cy="5" r="5" fill="#FFFFFF" />
-          </svg>
+          <span v-if="activity.status === ongoing" class="relative flex h-2 w-2 mr-2">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75" />
+            <span class="relative inline-flex rounded-full h-2 w-2 bg-white" />
+          </span>
           {{ activity.status }}
         </h2>
         <h1 class="font-semibold leading-[26px] text-[#16A75C] md:text-[21px] md:leading-[34px]">

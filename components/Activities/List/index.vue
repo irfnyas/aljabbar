@@ -25,7 +25,7 @@
           v-for="(activity, index) in item.payloads"
           :key="index"
         >
-          <div class=" flex flex-col justify-between w-[296px] h-[354px] rounded-lg border border-gray-200 overflow-hidden">
+          <div class=" flex flex-col justify-between w-[296px] h-[354px] rounded-lg border border-gray-200 overflow-hidden mb-8">
             <div class="w-full h-[296px]">
               <img
                 :src="activity.poster_kegiatan"
@@ -39,12 +39,16 @@
               <div class="flex md:justify-center items-center">
                 <span
                   :class="{
-                    'py-2 px-4 rounded-[27px] text-xs': true,
+                    'py-2 px-4 rounded-[27px] text-xs flex items-center': true,
                     'bg-[#EEEEEE] text-[#757575]': activity.status === done,
-                    'bg-white text-green-600': activity.status === ongoing,
+                    'bg-[#16A75C] text-white': activity.status === ongoing,
                     'bg-[#FCF9EF] text-[#FF9500]': activity.status === coming
                   }"
                 >
+                  <span v-if="activity.status === ongoing" class="relative flex h-2 w-2 mr-2">
+                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75" />
+                    <span class="relative inline-flex rounded-full h-2 w-2 bg-white" />
+                  </span>
                   {{ activity.status }}
                 </span>
               </div>
