@@ -56,19 +56,21 @@
       }"
     />
 
-    <!-- Button -->
-    <BaseButton v-if="activities.length" class="hidden lg:block mt-8 bg-[#16A75C] border-[#16A75C]">
-      Lihat Kegiatan Lainnya
-      <template #icon-right>
-        <img
-          src="/icons/open-tab-gray.svg"
-          alt="Ikon buka tab baru"
-          aria-hidden="true"
-          width="16"
-          height="16"
-        >
-      </template>
-    </BaseButton>
+    <NuxtLink to="/kegiatan">
+      <!-- Button -->
+      <BaseButton v-if="activities.length" class="hidden lg:block mt-8 bg-[#16A75C] border-[#16A75C]">
+        Lihat Kegiatan Lainnya
+        <template #icon-right>
+          <img
+            src="/icons/open-tab-gray.svg"
+            alt="Ikon buka tab baru"
+            aria-hidden="true"
+            width="16"
+            height="16"
+          >
+        </template>
+      </BaseButton>
+    </NuxtLink>
 
     <!-- Modal -->
     <ActivitiesModal :show="showModal" :activity-id="activityId" @close="showModal = false" />
