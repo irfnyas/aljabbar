@@ -20,7 +20,7 @@
           </span>
         </div>
       </div>
-      <div class="flex gap-8">
+      <div class="flex gap-8 overflow-x-scroll">
         <div
           v-for="(activity, index) in item.payloads"
           :key="index"
