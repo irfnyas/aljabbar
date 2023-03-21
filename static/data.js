@@ -324,7 +324,7 @@ export const profile = Object.freeze(
           id: 14,
           title: 'Lampu Kinetik',
           content: [
-            'Lampu di langit-langit area marodh dengan desain yang menampilkan 99 asmaul husna berfungsi sebagai penerangan juga memperlihatkan keindahan asma Alla SWT.'
+            'Lampu di langit-langit area marodh dengan desain yang menampilkan 99 asmaul husna berfungsi sebagai penerangan juga memperlihatkan keindahan asma Allah SWT.'
           ],
           isImageFirst: true,
           image: '/images/facilities/lampu-kinetik.png'
