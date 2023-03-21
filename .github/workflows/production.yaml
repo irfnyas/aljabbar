@@ -34,6 +34,8 @@ jobs:
           file: Dockerfile
           push: true
           tags: ${{ secrets.SERVICE_IMAGENAME }}:${{ steps.vars.outputs.sha_short }}
+          build-args: |
+            GOOGLE_ANALYTICS_ID=${{ secrets.GOOGLE_ANALYTICS_ID }}
     # GitOps
       - name: GitOps ArgoCD Setup
         run: |
