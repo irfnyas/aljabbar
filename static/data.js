@@ -201,7 +201,7 @@ export const profile = Object.freeze(
     },
     facilities: {
       title: 'Fasilitas Masjid Raya Al Jabbar',
-      subtitle: 'Fasilitas yang terdapat di Masjid Raya Al Jabbar meliputi tempat wudhu outdoor, area shalat utama, lantai mezzanine, relung, museum Rasulullah, koridor, jembatan nabi musa, patung Al Jabbar, perpustakaan, ruang edukasi dan danau wisata.',
+      subtitle: 'Fasilitas yang terdapat di Masjid Raya Al Jabbar meliputi tempat wudhu outdoor, area shalat utama, lantai mezanin, relung, museum Rasulullah, koridor, jembatan nabi musa, patung Al Jabbar, perpustakaan, ruang edukasi dan danau wisata.',
       data: [
         {
           id: 1,
