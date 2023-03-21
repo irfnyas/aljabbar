@@ -6,14 +6,20 @@
     <!-- Header -->
     <template #header>
       <section class="flex flex-col p-4 md:px-6 md:mb-6">
-        <h2 class="flex w-fit items-center bg-[#16A75C] rounded-[27px] py-[5.5px] px-3 text-white font-medium text-xs leading-[19px] mb-2">
-          <svg height="10" width="10" class="min-w-[10px] mr-[7px]">
+        <h2
+          :class="{
+            'flex w-fit items-center rounded-[27px] py-[5.5px] px-3 font-medium text-xs leading-[19px] mb-2': true,
+            'bg-[#F5F5F5] text-gray-600': activity.status === done,
+            'bg-[#16A75C] text-white': activity.status === ongoing,
+            'bg-[#FCF9EF] text-yellow-800': activity.status === coming
+          }">
+          <svg v-if="activity.status === ongoing" height="10" width="10" class="min-w-[10px] mr-[7px]">
             <circle cx="5" cy="5" r="5" fill="#FFFFFF" />
           </svg>
-          Sedang berlangsung
+          {{ activity.status }}
         </h2>
         <h1 class="font-semibold leading-[26px] text-[#16A75C] md:text-[21px] md:leading-[34px]">
-          Ceramah Dzuhur Engkus Suhendar Pengurus MUI Cicendo
+          {{ activity?.nama_kegiatan || '-' }}
         </h1>
       </section>
     </template>
@@ -21,7 +27,10 @@
     <!-- Body -->
     <section class="md:grid md:grid-cols-[300px,auto] lg:grid-cols-[375px,auto] md:gap-6 px-4 md:px-6 md:h-[440px] md:w-[738px] lg:w-[813px]">
       <!-- Activity Image  -->
-      <div class="md:rounded-lg md:border md:border-[#EEEEEE] w-full h-60 md:h-[300px] lg:h-[375px] bg-[url('/images/facilities.png')] mb-8"/>
+      <div
+        class="rounded-lg md:border md:border-[#EEEEEE] w-full h-60 md:h-[300px] lg:h-[375px] mb-8"
+        :style="`background-image: url('${activity?.poster_kegiatan}')`"
+      />
 
       <div>
         <!-- Tabs -->
@@ -38,7 +47,11 @@
         </div>
 
         <!-- Content -->
-        <ActivitiesModalContent :tab="activeTab" class="md:max-h-[338px] overflow-y-scroll"  />
+        <ActivitiesModalContent
+          :tab="activeTab"
+          :activity="activity"
+          class="md:max-h-[338px] overflow-y-scroll"
+        />
       </div>
     </section>
 
@@ -55,6 +68,7 @@
 
 <script>
 import { activityTabs } from '~/static/data'
+import { activityStatus } from '~/static/data'
 
 export default {
   name: 'ActivitiesModal',
@@ -62,16 +76,37 @@ export default {
     show: {
       type: Boolean,
       default: false
+    },
+    activityId: {
+      type: String,
+      default: ''
     }
   },
   data() {
+    const { done, ongoing, coming } = activityStatus
     return {
+      done,
+      ongoing,
+      coming,
       tabs: activityTabs,
-      activeTab: null
+      activeTab: null,
+      activity: {}
     }
   },
   mounted() {
     this.activeTab = this.tabs.KEGIATAN
+  },
+  watch: {
+    show(value) {
+      if (value) { this.fetchData() }
+    }
+  },
+  methods: {
+    async fetchData() {
+      // @todo: create loading state
+      const response = await this.$axios.$get(`/v1/activities/${this.activityId}`)
+      this.activity = { ...response.data }
+    }
   }
 }
 </script>

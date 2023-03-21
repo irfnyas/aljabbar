@@ -10,7 +10,7 @@
               Jenis Kegiatan
             </p>
             <p class="bg-[#ECF9F0] py-1 px-2 w-fit rounded-[27px] text-[#069550] text-sm leading-[23px] mt-1">
-              Ceramah
+              {{ activity?.jenis_kegiatan || '-' }}
             </p>
           </div>
           <div class="flex flex-col">
@@ -18,7 +18,7 @@
               Tipe Kegiatan
             </p>
             <p class="bg-[#F2F4F7] py-1 px-2 w-fit rounded-[27px] text-sm leading-[23px] mt-1">
-              Offline
+              {{ activity?.tipe_kegiatan || '-' }}
             </p>
           </div>
         </div>
@@ -32,7 +32,7 @@
               Tanggal Kegiatan
             </p>
             <p class="py-1 w-fit rounded-[27px] text-[#424242] text-sm leading-[23px] mt-1">
-              Jumat, 10 Feb 2023
+              {{ activityDate }}
             </p>
           </div>
           <div class="flex flex-col">
@@ -40,7 +40,7 @@
               Jam Kegiatan
             </p>
             <p class="text-[#424242] py-1 w-fit rounded-[27px] text-sm leading-[23px] mt-1">
-              09:00 - 12:00 WIB
+              {{ activity.jam_mulai?.slice(0, 5) || '-' }} - {{ activity?.jam_selesai || '-' }} WIB
             </p>
           </div>
         </div>
@@ -53,6 +53,7 @@
             Deskripsi
           </p>
           <p class="py-1 w-fit rounded-[27px] text-[#424242] text-sm leading-[23px] mt-1">
+            <!-- @todo: couldn't found description props on API data -->
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quam consectetur consectetur imperdiet facilisi dictum non quam dui.
           </p>
         </div>
@@ -65,7 +66,7 @@
             Lokasi Kegiatan
           </p>
           <p class="py-1 w-fit rounded-[27px] text-[#424242] text-sm leading-[23px] mt-1">
-            Masjid dalam utama
+            {{ activity?.lokasi_kegiatan || '-' }}
           </p>
         </div>
       </div>
@@ -81,7 +82,7 @@
             target="_blank"
             class="py-1 w-fit rounded-[27px] text-[#424242] text-sm leading-[23px] mt-1"
           >
-            https://s.id/LightningTalkITDEV
+            {{ activity?.link_kegiatan || '-' }}
           </a>
         </div>
       </div>
@@ -97,7 +98,7 @@
               Nama Majelis Taklim/Organisasi
             </p>
             <p class="py-1 w-fit rounded-[27px] text-[#424242] text-sm leading-[23px] mt-1">
-              Komunitas Tilawah Tiga Puluh Juz
+              {{ activity?.nama_majelis_taklim || '-' }}
             </p>
           </div>
         </div>
@@ -111,7 +112,7 @@
               Alamat Majelis Taklim/Organisasi
             </p>
             <p class="py-1 w-fit rounded-[27px] text-[#424242] text-sm leading-[23px] mt-1">
-              Masjid dalam utama
+              {{ activity?.alamat_majelis_taklim || '-' }}
             </p>
           </div>
         </div>
@@ -125,7 +126,7 @@
               Penanggung Jawab
             </p>
             <p class="py-1 w-fit rounded-[27px] text-[#424242] text-sm leading-[23px] mt-1">
-              Ust. Hendra Daelami
+              {{ activity?.nama_pj_majelis_taklim || '-' }}
             </p>
           </div>
           <div class="flex flex-col">
@@ -133,7 +134,7 @@
               No. HP Penanggung Jawab
             </p>
             <p class="text-[#424242] py-1 w-fit rounded-[27px] text-sm leading-[23px] mt-1">
-              0822 1048 2538
+              {{ activity?.no_hp_pj_majelis_taklim || '-' }}
             </p>
           </div>
         </div>
@@ -158,13 +159,13 @@
               Nama Pemateri
             </p>
             <p class="py-1 w-fit rounded-[27px] text-[#424242] text-sm leading-[23px] mt-1 mb-4">
-              Engkus Suhendar
+              {{ activity?.nama_pemateri || '-' }}
             </p>
             <p>
               Gelar/Jabatan
             </p>
             <p class="py-1 w-fit rounded-[27px] text-[#424242] text-sm leading-[23px] mt-1">
-              Pengurus
+              {{ activity?.gelar_pemateri || '-' }}
             </p>
           </div>
         </div>
@@ -178,7 +179,7 @@
               Asal Instansi
             </p>
             <p class="py-1 w-fit rounded-[27px] text-[#424242] text-sm leading-[23px] mt-1">
-              MUI Cicendo
+              {{ activity?.asal_instansi_pemateri || '-' }}
             </p>
           </div>
         </div>
@@ -189,17 +190,36 @@
 
 <script>
 import { activityTabs } from '~/static/data'
+import { format } from '~/utils/date'
 
 export default {
   props: {
     tab: {
       type: String,
       default: 'KEGIATAN'
+    },
+    activity: {
+      type: Object,
+      default: () => ({})
     }
   },
   data() {
     return {
       tabs: activityTabs
+    }
+  },
+  computed: {
+    activityDate() {
+      if (Object.keys(this.activity).length === 0) {
+        return '-'
+      }
+      const options = {
+        year: 'numeric',
+        month: 'short',
+        day: 'numeric',
+        weekday: 'long'
+      }
+      return format(this.activity.tanggal_kegiatan, options)
     }
   }
 }
