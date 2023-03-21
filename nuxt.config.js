@@ -25,6 +25,7 @@ export default {
     '~/plugins/vue-touch-events',
     '~/plugins/swiper',
     '~/plugins/jabar-design-system.js',
+    '~/plugins/vue-gtag.js'
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -52,7 +53,8 @@ export default {
   publicRuntimeConfig: {
     axios: {
       browserBaseURL: process.env.BROWSER_API_URL
-    }
+    },
+    googleAnalyticsId: process.env.GOOGLE_ANALYTICS_ID
   },
 
   privateRuntimeConfig: {
