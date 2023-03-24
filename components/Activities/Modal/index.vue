@@ -29,7 +29,7 @@
     <section class="md:grid md:grid-cols-[300px,auto] lg:grid-cols-[375px,auto] md:gap-6 px-4 md:px-6 md:h-[440px] md:w-[738px] lg:w-[813px]">
       <!-- Activity Image  -->
       <div
-        class="rounded-lg md:border md:border-[#EEEEEE] w-full h-60 md:h-[300px] lg:h-[375px] mb-8"
+        class="rounded-lg md:border md:border-[#EEEEEE] w-full h-60 md:h-[300px] lg:h-[375px] mb-8 bg-cover bg-center"
         :style="`background-image: url('${activity?.poster_kegiatan}')`"
       />
 
