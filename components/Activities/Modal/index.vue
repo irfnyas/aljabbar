@@ -5,7 +5,7 @@
   >
     <!-- Header -->
     <template #header>
-      <section class="flex flex-col p-4 md:px-6 md:mb-6">
+      <section class="flex flex-col p-4 md:px-6 md:py-4">
         <h2
           :class="{
             'flex w-fit items-center rounded-[27px] py-[5.5px] px-3 font-medium text-xs leading-[19px] mb-2': true,
@@ -26,14 +26,14 @@
     </template>
 
     <!-- Body -->
-    <section class="md:grid md:grid-cols-[300px,auto] lg:grid-cols-[375px,auto] md:gap-6 px-4 md:px-6 md:h-[440px] md:w-[738px] lg:w-[813px]">
+    <section class="md:grid md:grid-cols-[300px,auto] lg:grid-cols-[375px,auto] w-full md:gap-6 md:p-6 md:h-[460px]">
       <!-- Activity Image  -->
       <div
-        class="rounded-lg md:border md:border-[#EEEEEE] w-full h-60 md:h-[300px] lg:h-[375px] mb-8 bg-cover bg-center"
+        class="md:rounded-lg md:border md:border-[#EEEEEE] w-full h-60 md:h-[300px] lg:h-[375px] mb-8 bg-cover bg-center"
         :style="`background-image: url('${activity?.poster_kegiatan}')`"
       />
 
-      <div>
+      <div class="px-4 md:px-0">
         <!-- Tabs -->
         <div class="grid grid-cols-3 text-[#9E9E9E] text-sm md:text-base text-center leading-[23px] md:leading-[26px] border-b border-[#E0E0E0] pb-2 hover:cursor-pointer mb-6">
           <button :class="{'active': activeTab === tabs.KEGIATAN}" @click="activeTab = tabs.KEGIATAN">
@@ -58,7 +58,7 @@
 
     <!-- Footer -->
     <template #footer>
-      <div class="flex w-full items-center justify-center py-4 md:pt-0">
+      <div class="flex w-full items-center justify-center py-4 md:px-6 bg-[#FAFAFA]">
         <BaseButton class="w-fit border-[#069550] text-[#069550]" @click="$emit('close')">
           Tutup
         </BaseButton>
