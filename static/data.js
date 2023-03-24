@@ -37,11 +37,18 @@ export const navigationMenus = [
         link: '/keistimewaan'
       },
       {
-        id: 1,
+        id: 3,
         title: 'Fasilitas Masjid Raya Al Jabbar',
         description: 'Fasilitas yang terdapat di Masjid Al Jabbar meliputi tempat wudhu outdoor, area shalat utama, lantai mezanin, relung, museum Nabi Muhammad, koridor, jembatan Nabi Musa, patung Al Jabbar, perpustakaan, ruang edukasi, dll.',
         icon: '/icons/dome.svg',
         link: '/fasilitas'
+      },
+      {
+        id: 4,
+        title: 'Pengurus DKM Mesjid Raya Al Jabbar',
+        description: 'Pada hari Senin, 20 Maret 2023 telah dilantik oleh Gubernur Jawa Barat, Pengurus Dewan Pembina Masjid Raya Al Jabbar yang terdiri dari dewan pembina masjid dan dewan eksekutif masjid. Susunan kepengurusan DKM & uraian tugasnya dapat dilihat selengkapnya pada link berikut.',
+        icon: '/icons/person-nav.svg',
+        link: 'https://drive.google.com/file/d/1wRe1v9QUv-AJ4dR_GvuPsfSbvJIcpVt8/view?usp=sharing'
       },
     ]
   }

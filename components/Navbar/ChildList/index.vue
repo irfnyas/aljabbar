@@ -21,7 +21,7 @@
             >
           </button>
         </div>
-        <ul class="flex justify-between w-full">
+        <ul class="grid grid-cols-3 gap-1">
           <NavbarChildListItem
             v-for="(child, childIndex) in menu.items"
             :key="childIndex"

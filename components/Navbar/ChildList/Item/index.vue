@@ -1,16 +1,15 @@
 <template>
-  <NuxtLink :to="item.link">
+  <a :href="item.link" :target="item.link.startsWith('http') ? '_blank' : ''">
     <li
       @click="$emit('click')"
-      class="grid grid-cols-[16px,auto] gap-[23px] px-3 py-[14px] transition-all hover:cursor-pointer lg:max-w-[421px] hover:bg-[#FAFAFA] hover:rounded-lg"
+      class="grid grid-cols-[22px,auto] gap-3 px-3 py-[14px] transition-all hover:cursor-pointer lg:max-w-[421px] hover:bg-[#FAFAFA] hover:rounded-lg"
     >
       <img
         :src="item.icon"
-        class="pt-[5px]"
         :alt="`Ikon ${item.title}`"
         aria-hidden="true"
-        height="16"
-        width="16"
+        height="22"
+        width="22"
       >
       <div>
         <h1 class="text-black leading-[26px]">
@@ -21,7 +20,7 @@
         </p>
       </div>
     </li>
-  </NuxtLink>
+  </a>
 </template>
 
 <script>
