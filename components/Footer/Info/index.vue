@@ -22,7 +22,7 @@
       <img src="/icons/contact.svg" alt="Ikon Kontak" aria-hidden="true" height="24" width="24">
       <div class="flex flex-col">
         <p class="font-bold text-base text-[#212121] leading-6 mb-3">Kontak DKM</p>
-        <a href="https://wa.me/08170202155" target="_blank" class="text-[#424242] text-sm leading-6">
+        <a href="https://wa.me/+628170202155" target="_blank" class="text-[#424242] text-sm leading-6">
           Birokesra <span class="mx-[3]">:</span> (+62) 8170202155
         </a>
       </div>
