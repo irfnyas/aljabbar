@@ -11,11 +11,11 @@
         height="22"
         width="22"
       >
-      <div>
-        <h1 class="text-black leading-[26px]">
+      <div class="flex flex-col gap-1">
+        <h1 class="!text-[#212121] !text-[15px] !font-roboto !font-medium !leading-[26px]">
           {{ item.title }}
         </h1>
-        <p class="text-xs leading-5 text-[#616161] line-clamp-2">
+            <p class="!text-[#616161] !text-sm !font-lato !font-light !leading-[23px] line-clamp-2">
           {{ item.description }}
         </p>
       </div>
