@@ -52,7 +52,7 @@ export default {
           id: 4,
           image: '/images/facilities/direction.png',
           title: 'Petunjuk Arah Ke Masjid Raya Al-Jabbar',
-          link: 'https://goo.gl/maps/nYh6VSeCCq16rfeZ7'
+          link: 'https://www.google.com/maps/dir/?api=1&destination=Masjid+Raya+Aljabbar'
         },
         {
           id: 5,
