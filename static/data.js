@@ -161,7 +161,7 @@ export const profile = Object.freeze(
         },
         {
           id: 12,
-          title: 'Sculpture Al Jabbar',
+          title: '<em>Sculpture</em> Al Jabbar',
           content: [
             'Siapa sangka bahwa karya seni yang menyambut kita di area depan adalah lafaz Al Jabbar yang dipelintir? Inilah karya salah satu seniman asal Bandung. Berlatarkan patung Al Jabbar sekaligus bangunan masjid secara utuh, ini bisa spot foto terbaikmu!'
           ],
@@ -461,7 +461,7 @@ export const profile = Object.freeze(
     },
     histories: {
       title: 'Sejarah Masjid Raya Al Jabbar',
-      subtitle: 'Masjid Raya Al Jabbar mulai didesain tahun 2015 oleh Ridwan Kamil sebagai Masjid Raya tingkat Pemerintah Daerah Provinsi. Bangunan utama dirancang dengan luas lantai 99 x 99 m2 sesuai angka Asmaul Husna.',
+      subtitle: 'Masjid Raya Al Jabbar mulai didesain tahun 2015 oleh Ridwan Kamil sebagai Masjid Raya tingkat Pemerintah Daerah Provinsi. Bangunan utama dirancang dengan luas lantai 99 x 99 m<sup>2</sup> sesuai angka Asmaul Husna.',
       data: [
         {
           id: 1,
