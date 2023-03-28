@@ -15,7 +15,7 @@
         {{ title }}
       </h1>
       <div class="w-32 border-2 border-green-600" />
-      <p v-html="subtitle" class="text-gray-700 font-light text-sm md:text-base lg:text-center max-w-[832px]leading-[23px] md:leading-[26px]" />
+      <p v-html="subtitle" class="text-gray-700 font-light text-sm md:text-base lg:text-center max-w-[840px] leading-[23px] md:leading-[26px]" />
     </div>
     <slot />
   </div>
