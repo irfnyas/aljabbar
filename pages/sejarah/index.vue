@@ -20,12 +20,11 @@ import { profile } from '~/static/data'
 export default {
   name: 'HistoriesPage',
   data () {
-    const { title, subtitle, data, footnote } = profile.histories
+    const { title, subtitle, data } = profile.histories
     return {
       title,
       subtitle,
-      data,
-      footnote
+      data
     }
   }
 }
